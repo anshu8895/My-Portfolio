@@ -162,7 +162,7 @@ nav ul li a:hover::after {
 }
 
 .work:hover .layer {
-    height: 80%;
+    height: 100%;
 }
 
 /* about-section */
@@ -357,14 +357,15 @@ form textarea {
 }
 
 
+
 /* CSS for small screen */
 nav .fa-solid{
     display: none;
 }
 @media only screen and (max-width:600px){
-    #header{
+    /* #header{
         background-image: url(images/bg1small.png);
-    }
+    } */
     .header-text{
         margin-top: 100%;
         font-size: 16px;
@@ -372,6 +373,18 @@ nav .fa-solid{
     .header-text h1{
         font-size: 30px;
     }
+
+    .fa-solid.fa-bars {
+        position: fixed;
+        top: 28px; /* Adjust as needed */
+        right: 16px; /* Adjust as needed */
+        z-index: 1001; /* Ensure the icon stays above other content */
+    }
+
+    i.fa-solid.fa-bars.hide {
+        display: none !important;
+    }
+
     nav .fa-solid{
         display: block;
         font-size: 25px;
