@@ -16,7 +16,19 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+var icon = document.getElementById("theme-icon")
+var header = document.getElementById("header")
+icon.onclick = function(){
+    document.body.classList.toggle("light-theme");
+    if (document.body.classList.contains("light-theme")) {
+        icon.src = "images/moon.png";
+        header.style.backgroundImage = "url('images/bg-white.jpg')";
+    } else {
+        icon.src = "images/sun.png";
+        header.style.backgroundImage = "url('images/bg1.png')";
 
+    }
+}
 var tablinks = document.getElementsByClassName("tab-links")
 var tabcontents = document.getElementsByClassName("tab-contents")
 
